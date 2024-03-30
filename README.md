@@ -7,7 +7,7 @@ This is for educational and experimental purposes only. Though the Kattis TOS do
 It's also important to note that this software is most definitely not allowed in any competition (ex. ICPC), and neither is it practical since it takes many failed submissions to extract just one test case.
 
 ## How it Works
-I did not come up with this idea btw. Kattis does not reveal failed test cases, but it does reveal why the test case fails. Thus, each submission failure code can be treated as an output. Therefore, its possible to extract data about a test case.
+I did not come up with this idea btw. Kattis does not reveal failed test cases, but it does reveal why the test case fails. Thus, each submission failure code can be treated as an output. Therefore, its possible to extract data about a test case. This program utilizes four submission failure types to extract on crumb (two bits) of information from each submission.
 
 ## Usage
 This relies on submit.py, which comes from https://github.com/Kattis/kattis-cli.
@@ -22,5 +22,5 @@ The remaining files are used as such...
 
 run extractor.py and specify the problem name (name of problem in URL) and number of submissions per frame.
 
-For an example sub.py and submissionProcess.py, check the examples folder.
+For an example sub.py and submissionProcess.py, check the examples folder. I encourage you to read through those two files along with extractor.py 
 

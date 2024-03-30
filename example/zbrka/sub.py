@@ -1,8 +1,8 @@
-frameNum = 4
-crumbNum = 1
-subsPerFrame = 2
+frameNum = 0
+crumbNum = 0
+subsPerFrame = 0
 
-#The above values get updated by extractor.py
+#The above values get updated by extractor.py, so do not edit them here
 
 def memError():
     [{} for i in range(10 ** 10)]
@@ -36,11 +36,13 @@ def runErrorCall(value, crumbNum):
 # your code should only use the frameNumber
 # PLACE CODE AFTER HERE ------------------------------------------------------------------------------------------------
 
-#example, zbrka
+#example, zbrka https://open.kattis.com/problems/zbrka
 num0, num1 = input().split(" ")
 
 # for this example, we will treat each digit as a seperate frame, so two crumbs will be needed per frame
-# we will map each number to its associated number, we will map the space char to 10, and then map END to 11
+# thus, we will have 2 submissions per frame since each submission amounts to one crumb
+# there are 4 possible errors to throw, so we can encode one crumb (2 bits) with each submission
+# we will map each number to itself (7 will just become 7), we will map the space char to 10, and then map END to 11
 
 # put input into a list of digits (frames)
 outList = []
@@ -51,6 +53,8 @@ for dig in num1:
     outList.append(int(dig))
 outList.append(11) #append END
 
+# run error call on a specific frame, indexed using the frameNum variable from line 1
+# note that crumbNum is not modified in any way. It is just used in the function call
 runErrorCall(outList[frameNum], crumbNum) #make call to error
 
 

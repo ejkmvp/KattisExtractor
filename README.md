@@ -7,7 +7,7 @@ This is for educational and experimental purposes only. Though the Kattis TOS do
 It's also important to note that this software is most definitely not allowed in any competition (ex. ICPC), and neither is it practical since it takes many failed submissions to extract just one test case.
 
 ## How it Works
-Thanks to Tobias Bessler and Robert Boerwinkle for the idea and some initial testing.
+Thanks to Tobias Bessler and Robert Boerwinkle (from S&T) for the idea and some initial testing.
 Kattis does not reveal failed test cases, but it does reveal why the test case fails. Thus, each submission failure code can be treated as an output. Therefore, its possible to extract data about a test case. This program utilizes four submission failure types to extract on crumb (two bits) of information from each submission.
 
 ## Usage

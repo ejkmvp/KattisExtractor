@@ -1,0 +1,3 @@
+to run...
+
+python extractor.py zbrka 2 
